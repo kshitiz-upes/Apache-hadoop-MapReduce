@@ -31,10 +31,9 @@ public class WCDriver extends Configured implements Tool {
         conf.setOutputValueClass(IntWritable.class); 
         JobClient.runJob(conf); 
         return 0; 
-    } 
-  
-    // Main Method 
-    public static void main(String args[]) throws Exception 
+    }   
+
+  public static void main(String args[]) throws Exception 
     { 
         int exitCode = ToolRunner.run(new WCDriver(), args); 
         System.out.println(exitCode); 
