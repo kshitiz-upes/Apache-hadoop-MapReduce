@@ -9,19 +9,15 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-
 public class Driver extends Configured implements Tool {
-
- public static void main(String[] args) throws Exception
+  public static void main(String[] args) throws Exception
  {
-
    ToolRunner.run(new Driver(), args);
  }
 
  @Override
  public int run(String[] args) throws Exception
  {
-
   /*   Driver Class for Word Co-occurence problem */
   Job job=new Job(getConf(),"KP Word Cooccurence Job");
   job.setJarByClass(WLDriver.class);
