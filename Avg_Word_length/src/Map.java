@@ -14,7 +14,6 @@ public class Map extends Mapper<LongWritable,Text,Text,IntWritable>{
             throws IOException, InterruptedException {
 
         line = value.toString();
-
         for (String word : line.split("\\W+")){
             if (word.length() > 0) {
                 firstLetter.set(String.valueOf(word.charAt(0)));
