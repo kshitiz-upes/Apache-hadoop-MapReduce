@@ -19,13 +19,12 @@ public class Driver extends Configured implements Tool {
  @Override
  public int run(String[] args) throws Exception
  {
-  /*   Driver Class for Word Co-occurence problem */
+
   Job job=new Job(getConf(),"KP Word Cooccurence Job");
   job.setJarByClass(Driver.class);
 
   job.setMapperClass(Map.class);
   job.setReducerClass(Reduce.class);
-/* job.setNumReduceTasks(0);  */
   job.setInputFormatClass(TextInputFormat.class);
 
   job.setMapOutputKeyClass(Text.class);
